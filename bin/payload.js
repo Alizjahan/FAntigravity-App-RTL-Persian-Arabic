@@ -383,12 +383,12 @@ win.webContents.on('dom-ready', () => {
                     let codeFontStr = codeFont ? \`'\${codeFont}', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace\` : 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace';
 
                     let forceRtlStyle = (isRTL && forceRTL) ? \`
-                        .prose :is(p, li, ul, ol, h1, h2, h3, h4, h5, h6, blockquote):not(pre *):not(code *):not(.monaco-editor *), 
-                        [data-testid="chat-message"] :is(p, li, ul, ol, h1, h2, h3, h4, h5, h6, blockquote):not(pre *):not(code *):not(.monaco-editor *), 
-                        .markdown-body :is(p, li, ul, ol, h1, h2, h3, h4, h5, h6, blockquote):not(pre *):not(code *):not(.monaco-editor *), 
-                        .leading-relaxed :is(p, li, ul, ol, h1, h2, h3, h4, h5, h6, blockquote):not(pre *):not(code *):not(.monaco-editor *),
+                        .prose :is(p, li, ul, ol, h1, h2, h3, h4, h5, h6, blockquote):not(pre *):not(code *):not(.monaco-editor *):not(.katex *):not(math *):not(mjx-container *), 
+                        [data-testid="chat-message"] :is(p, li, ul, ol, h1, h2, h3, h4, h5, h6, blockquote):not(pre *):not(code *):not(.monaco-editor *):not(.katex *):not(math *):not(mjx-container *), 
+                        .markdown-body :is(p, li, ul, ol, h1, h2, h3, h4, h5, h6, blockquote):not(pre *):not(code *):not(.monaco-editor *):not(.katex *):not(math *):not(mjx-container *), 
+                        .leading-relaxed :is(p, li, ul, ol, h1, h2, h3, h4, h5, h6, blockquote):not(pre *):not(code *):not(.monaco-editor *):not(.katex *):not(math *):not(mjx-container *),
                         [data-testid="user-input-step"],
-                        [data-testid="user-input-step"] :is(p, div):not(pre *):not(code *):not(.monaco-editor *),
+                        [data-testid="user-input-step"] :is(p, div):not(pre *):not(code *):not(.monaco-editor *):not(.katex *):not(math *):not(mjx-container *),
                         div:has(> [role="radiogroup"]),
                         label[for^="ask-opt-"] {
                             direction: rtl !important;
@@ -420,12 +420,32 @@ win.webContents.on('dom-ready', () => {
                         :root, :host, html, body {
                             font-family: \${faFontName}, \${enFontStr}, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
                         }
-                        [dir="rtl"], [dir="rtl"] *:not(pre):not(code),
-                        .prose, .prose *, [data-testid="chat-message"], [data-testid="chat-message"] *,
-                        .markdown-body, .markdown-body *, .leading-relaxed, .leading-relaxed *,
-                        [contenteditable="true"], [contenteditable="true"] *, [data-lexical-text="true"],
+                        [dir="rtl"]:not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
+                        [dir="rtl"] *:not(pre):not(code):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
+                        .prose *:not(pre):not(code):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
+                        [data-testid="chat-message"] *:not(pre):not(code):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
+                        .markdown-body *:not(pre):not(code):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
+                        .leading-relaxed *:not(pre):not(code):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
+                        [contenteditable="true"], [contenteditable="true"] *:not(.katex):not(.katex *), [data-lexical-text="true"],
                         label[for^="ask-opt-"], textarea[data-testid="ask-question-writein"] {
                             font-family: \${faFontName}, \${enFontStr}, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+                        }
+                        /* Strict Math & Formula Protection (KaTeX, MathML, MathJax) */
+                        .katex, .katex-html, .katex-display, .katex-display *,
+                        math, math *, mjx-container, mjx-container *, .MathJax, .MathJax *, .katex * {
+                            direction: ltr !important;
+                            text-align: left !important;
+                            unicode-bidi: isolate !important;
+                            font-family: KaTeX_Main, KaTeX_Math, KaTeX_Size1, KaTeX_Size2, KaTeX_Size3, KaTeX_Size4, KaTeX_AMS, KaTeX_Caligraphic, KaTeX_Fraktur, KaTeX_SansSerif, KaTeX_Script, KaTeX_Typewriter, "Times New Roman", serif !important;
+                            line-height: normal !important;
+                        }
+                        .katex, .katex-html {
+                            display: inline-block !important;
+                        }
+                        .katex-display {
+                            display: block !important;
+                            text-align: center !important;
+                            margin: 0.75em 0 !important;
                         }
                         .prose, [data-testid="chat-message"], .markdown-body, .leading-relaxed, [contenteditable="true"], [contenteditable="true"] p {
                             font-size: \${fs}px !important;
@@ -462,11 +482,17 @@ win.webContents.on('dom-ready', () => {
                             direction: ltr !important;
                             text-align: left !important;
                         }
-                        [dir="rtl"] :is(pre, code, .monaco-icon-label, [data-component-name="button"], .font-mono) {
+                        [dir="rtl"] :is(pre, code, .monaco-icon-label, [data-component-name="button"], .font-mono, .katex, .katex-html, math, mjx-container, .MathJax) {
                             direction: ltr !important;
                             text-align: left !important;
                             unicode-bidi: isolate !important;
                             display: inline-block;
+                        }
+                        [dir="rtl"] .katex-display {
+                            direction: ltr !important;
+                            text-align: center !important;
+                            unicode-bidi: isolate !important;
+                            display: block !important;
                         }
                         label[for^="ask-opt-"] {
                             unicode-bidi: plaintext;
@@ -591,9 +617,10 @@ win.webContents.on('dom-ready', () => {
                         }
                     }
 
-                    // 4. Character distribution check
-                    const persianChars = (text.match(/[\\u0600-\\u06FF\\u0750-\\u077F\\u08A0-\\u08FF\\uFB50-\\uFDFF\\uFE70-\\uFEFF]/g) || []).length;
-                    const latinChars = (text.match(/[A-Za-z]/g) || []).length;
+                    // 4. Character distribution check (exclude inline LaTeX formulas like $...$ from Latin letter count)
+                    const textWithoutMath = text.replace(/\\$[^\\$]+\\$/g, '');
+                    const persianChars = (textWithoutMath.match(/[\\u0600-\\u06FF\\u0750-\\u077F\\u08A0-\\u08FF\\uFB50-\\uFDFF\\uFE70-\\uFEFF]/g) || []).length;
+                    const latinChars = (textWithoutMath.match(/[A-Za-z]/g) || []).length;
 
                     if (persianChars > 0) {
                         if (persianChars >= latinChars) {
@@ -620,8 +647,16 @@ win.webContents.on('dom-ready', () => {
                     });
 
                     document.querySelectorAll('.prose, [data-testid="chat-message"], .markdown-body, .leading-relaxed').forEach(container => {
+                        // Protect all math/KaTeX elements inside container so formulas remain strictly LTR and isolated
+                        container.querySelectorAll('.katex, .katex-html, .katex-display, math, mjx-container, .MathJax').forEach(mathEl => {
+                            mathEl.setAttribute('dir', 'ltr');
+                            mathEl.style.setProperty('direction', 'ltr', 'important');
+                            mathEl.style.setProperty('text-align', mathEl.classList.contains('katex-display') ? 'center' : 'left', 'important');
+                            mathEl.style.setProperty('unicode-bidi', 'isolate', 'important');
+                        });
+
                         container.querySelectorAll('p, li, h1, h2, h3, h4, h5, h6, blockquote').forEach(el => {
-                            if (el.closest('pre, code, .monaco-editor')) return;
+                            if (el.closest('pre, code, .monaco-editor, .katex, .katex-display, math, mjx-container, .MathJax')) return;
                             const dir = detectElementDirection(el);
                             if (dir) {
                                 el.setAttribute('dir', dir);
