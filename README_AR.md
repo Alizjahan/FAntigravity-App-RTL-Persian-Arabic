@@ -10,6 +10,18 @@
 
 ---
 
+<div align="center">
+
+### 📸 لوحة التحكم ثلاثية اللغات (عربي | فارسي | إنجليزي)
+
+| الواجهة العربية | الواجهة الفارسية | الواجهة الإنجليزية |
+| :---: | :---: | :---: |
+| <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic/main/assets/preview_ar.png" alt="واجهة عربية FAntigravity App" width="100%" /> | <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic/main/assets/preview_fa.png" alt="واجهة فارسية FAntigravity App" width="100%" /> | <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic/main/assets/preview_en.png" alt="واجهة إنجليزية FAntigravity App" width="100%" /> |
+
+</div>
+
+---
+
 ## 🎯 الميزات الرئيسية
 
 - **واجهة مستخدم ثلاثية اللغات (عربي - فارسي - إنجليزي)**:
@@ -39,6 +51,13 @@
 ```bash
 npx -y -p github:Alizjahan/FAntigravity-App-RTL-Persian-Arabic fantigravity
 ```
+
+> [!TIP]
+> **ملاحظة سهلة للغاية لمستخدمي ماك (macOS):**
+> إذا كنت تستخدم نظام macOS، فلست بحاجة للتعامل مع الطرفية يدوياً! ما عليك سوى فتح شات Antigravity والطلب من الوكيل الذكي:
+> > *"يرجى تثبيت FAntigravity من `github:Alizjahan/FAntigravity-App-RTL-Persian-Arabic` من أجلي"*
+> 
+> سيقوم الوكيل الذكي تلقائياً بتحديد المسار وتطبيق التعريب وتفعيل المحاذاة بكل سهولة ودون أي عناء!
 
 ### استعادة النسخة الأصلية (Uninstallation)
 لاسترجاع تطبيق Antigravity إلى حالته الأصلية بدون أي تعديل:

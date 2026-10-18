@@ -10,6 +10,18 @@
 
 ---
 
+<div align="center">
+
+### 📸 نمای پنل تنظیمات ۳ زبانه (فارسی | عربی | انگلیسی)
+
+| پنل فارسی | پنل عربی | پنل انگلیسی |
+| :---: | :---: | :---: |
+| <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic/main/assets/preview_fa.png" alt="پنل فارسی FAntigravity App" width="100%" /> | <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic/main/assets/preview_ar.png" alt="پنل عربی FAntigravity App" width="100%" /> | <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic/main/assets/preview_en.png" alt="پنل انگلیسی FAntigravity App" width="100%" /> |
+
+</div>
+
+---
+
 ## ✨ قابلیت‌ها
 
 - **رابط کاربری ۳ زبانه (فارسی | عربی | انگلیسی)**:
@@ -42,6 +54,13 @@
 ```bash
 npx -y -p github:Alizjahan/FAntigravity-App-RTL-Persian-Arabic fantigravity
 ```
+
+> [!TIP]
+> **نکته بسیار راحت برای کاربران مک (macOS):**
+> اگر از مک استفاده می‌کنید، نیازی به کار با ترمینال ندارید! کافیست داخل چت برنامه Antigravity به هوش مصنوعی بگویید:
+> > *"لطفاً FAntigravity رو از ریپازیتوری `github:Alizjahan/FAntigravity-App-RTL-Persian-Arabic` برای من نصب کن"*
+> 
+> خود ایجنت تمام مراحل نصب، پچ و فعال‌سازی راست‌چین را به صورت خودکار و بدون دردسر برای شما انجام می‌دهد.
 
 ### روش دوم: بازگردانی به نسخه اولیه (Restore)
 

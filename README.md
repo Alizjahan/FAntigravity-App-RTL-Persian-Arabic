@@ -21,6 +21,18 @@ Read and write naturally in Persian, Arabic, and Hebrew inside Google Antigravit
 
 ---
 
+<div align="center">
+
+### 📸 Tri-Lingual Settings Panel (Fa / Ar / En)
+
+| فارسی (Persian) | العربية (Arabic) | English |
+| :---: | :---: | :---: |
+| <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic/main/assets/preview_fa.png" alt="FAntigravity App Persian UI" width="100%" /> | <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic/main/assets/preview_ar.png" alt="FAntigravity App Arabic UI" width="100%" /> | <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic/main/assets/preview_en.png" alt="FAntigravity App English UI" width="100%" /> |
+
+</div>
+
+---
+
 ## Overview
 
 **FAntigravity-App-RTL-Persian-Arabic** is a non-invasive right-to-left (RTL) injection engine and typography system tailored specifically for the official **Google Antigravity Standalone Desktop Application** (Electron).
@@ -62,6 +74,13 @@ Run directly from your terminal without cloning or manual installation:
 ```bash
 npx -y -p github:Alizjahan/FAntigravity-App-RTL-Persian-Arabic fantigravity
 ```
+
+> [!TIP]
+> **Super Easy for macOS Users:**
+> If you are using macOS, you don't even need to use the terminal manually! Simply open Antigravity and tell the built-in AI Agent:
+> > *"Please install FAntigravity from `github:Alizjahan/FAntigravity-App-RTL-Persian-Arabic` for me"*
+> 
+> The Antigravity AI Agent will autonomously detect your app path, apply the patch, and enable the RTL engine for you without any friction!
 
 ### Method 2: Single-Command Restore (Uninstallation)
 
