@@ -10,6 +10,15 @@
 
 ---
 
+> [!NOTE]
+> **ملاحظة رسمية حول إصدار البرنامج:**  
+> هذه الأداة مخصصة حصرياً لبيئة **Antigravity App** (تطبيق سطح المكتب المستقل).  
+> لبيئة **Antigravity IDE**، قمت بتطوير إضافة رسمية أخرى يمكنك البحث عنها وتثبيتها مباشرة من قسم الإضافات (Extensions).  
+> لمزيد من الإرشادات، يرجى زيارة المستودع التالي:  
+> 🔗 [**FAntigravity-IDE-RTL-Persian-Arabic**](https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-Arabic)
+
+---
+
 <div align="center">
 
 ### 📸 لوحة التحكم ثلاثية اللغات (عربي | فارسي | إنجليزي)

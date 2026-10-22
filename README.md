@@ -21,6 +21,15 @@ Read and write naturally in Persian, Arabic, and Hebrew inside Google Antigravit
 
 ---
 
+> [!NOTE]
+> **Important Note on Editions:**  
+> This package is specifically developed for the **Antigravity App** (Standalone Desktop Electron edition).  
+> If you are using **Antigravity IDE**, a dedicated official extension has been created for it which you can install directly from the Extensions marketplace or by searching `FAntigravity IDE RTL`.  
+> For more information, please visit the repository:  
+> 🔗 [**FAntigravity-IDE-RTL-Persian-Arabic**](https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-Arabic)
+
+---
+
 <div align="center">
 
 ### 📸 Tri-Lingual Settings Panel (Fa / Ar / En)
