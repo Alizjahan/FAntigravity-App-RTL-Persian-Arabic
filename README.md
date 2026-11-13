@@ -129,11 +129,10 @@ Options:
 
 ---
 
-## 👨‍💻 Author & Maintainer
+## Maintainer
 
-Developed with ❤️ by **Aliz ([@Alizjahan](https://github.com/Alizjahan))**
-- GitHub: [@Alizjahan](https://github.com/Alizjahan)
-- Telegram: [@Alizjahan](https://t.me/Alizjahan)
+- **GitHub:** [@Alizjahan](https://github.com/Alizjahan)
+- **Telegram:** [@Alizjahan](https://t.me/Alizjahan)
 
 ---
 
