@@ -129,7 +129,7 @@ Options:
 
 ---
 
-## Author & Maintainer
+## 👨‍💻 Author & Maintainer
 
 Developed with ❤️ by **Aliz ([@Alizjahan](https://github.com/Alizjahan))**
 - GitHub: [@Alizjahan](https://github.com/Alizjahan)
@@ -137,6 +137,6 @@ Developed with ❤️ by **Aliz ([@Alizjahan](https://github.com/Alizjahan))**
 
 ---
 
-## License
+## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
